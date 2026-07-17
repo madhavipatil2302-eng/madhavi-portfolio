@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madhavi Patil | Full Stack Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-ambient" aria-hidden="true">
+    <span class="ambient-dot dot-one"></span>
+    <span class="ambient-dot dot-two"></span>
+    <span class="ambient-dot dot-three"></span>
+  </div>
+
+  <!-- id="navbar" added: needed by script.js for scroll state + z-index anchor for the mobile drawer -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="#home">Madhavi<span>Patil</span></a>
+
+      <!-- Mobile structural wrapper: the sidebar now has its own fixed header area, separate from the scrollable menu links. -->
+      <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
+        <!-- Mobile-only sidebar header: keeps the Close button inside the drawer at the top-right. -->
+        <div class="nav-drawer-header">
+          <button class="nav-close" id="nav-close" type="button" aria-label="Close menu">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <!-- Scrollable drawer body: menu items start below the fixed header and keep their existing link styles. -->
+        <div class="nav-drawer-body">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <!-- Resume keeps the existing button styling and only appears inside the mobile drawer. -->
+          <a class="btn-outline nav-resume" href="Madhavi_Patil_Resume.pdf" download>Resume</a>
+        </div>
+      </nav>
+
+      <!-- Desktop-only resume button (hidden on mobile, replaced by the one inside the drawer) -->
+      <a class="btn-outline nav-resume-desktop" href="Madhavi_Patil_Resume.pdf" download>Resume</a>
+
+      <!-- Hamburger / close toggle, mobile only -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay behind the drawer, click closes it -->
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Hi, I am Madhavi Patil</h1>
+          <h2 class="role"><span id="typing"></span><span class="cursor">|</span></h2>
+          <p class="lead">
+            Full Stack Web Developer focused on building clean, responsive, and practical web applications using React, Node.js, databases, and modern UI practices.
+          </p>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="Madhavi_Patil_Resume.pdf" class="btn-muted" download>Download Resume</a>
+          </div>
+          <div class="hero-metrics" aria-label="Portfolio highlights">
+            <div>
+              <strong>5+</strong>
+              <span>Projects</span>
+            </div>
+            <div>
+              <strong>MERN</strong>
+              <span>Stack</span>
+            </div>
+            <div>
+              <strong>B.Tech</strong>
+              <span>Computer Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Profile photo">
+          <div class="photo-card">
+            <img src="Media.jpg" alt="Madhavi Patil profile" />
+          </div>
+          <div class="availability-card">
+            <span></span>
+            Open to internships and web projects
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-soft">
+      <div class="container about-grid">
+        <div class="reveal">
+          <p class="section-kicker">About</p>
+          <h2>Developer with a product mindset.</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>
+            I am a B.Tech Computer Engineering student passionate about building dynamic, user-friendly, and visually polished web applications.
+          </p>
+          <p>
+            My work combines frontend detail, backend logic, database design, and clean deployment-ready structure so each project feels useful and professional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Selected Work</p>
+          <h2>Featured Projects</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured reveal">
+            <div class="project-topline">
+              <span class="project-tag">Government Tech</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3>Grampanchayat Digital Services Portal</h3>
+            <p>
+              A professional village administration web platform designed to manage citizen services, certificates, complaints, notices, tax records, and local announcements in one organized dashboard.
+            </p>
+            <div class="project-stack">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Admin Dashboard</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="project-tag">Food Tech</span>
+            </div>
+            <h3>Messwala Web Application</h3>
+            <p>
+              A MERN stack platform with separate Messwala and Tiffinwala logins, monthly subscription flow, meal customization, and order management.
+            </p>
+            <div class="project-stack">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="project-tag">Education</span>
+            </div>
+            <h3>GATE Preparation App</h3>
+            <p>
+              An Android learning application created to help students prepare for GATE through organized study material, practice content, and exam-focused resources.
+            </p>
+            <div class="project-stack">
+              <span>Android</span>
+              <span>Java</span>
+              <span>UI Design</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="project-tag">Campus</span>
+            </div>
+            <h3>College Event Management</h3>
+            <p>
+              A PHP-based event management system for publishing college events, managing event details, and maintaining a clean photo gallery for campus activities.
+            </p>
+            <div class="project-stack">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Bootstrap</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="project-tag">Brand Site</span>
+            </div>
+            <h3>Coffee Shop Website</h3>
+            <p>
+              A responsive single-page coffee shop website with modern sections, smooth layout, menu highlights, and an attractive customer-facing interface.
+            </p>
+            <div class="project-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Toolkit</p>
+          <h2>Technical Skills</h2>
+        </div>
+        <div class="skill-grid reveal">
+          <span class="skill-pill">HTML5</span>
+          <span class="skill-pill">CSS3</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">React.js</span>
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">Express.js</span>
+          <span class="skill-pill">MongoDB</span>
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">PHP</span>
+          <span class="skill-pill">C/C++</span>
+          <span class="skill-pill">Postman</span>
+          <span class="skill-pill">GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="section-kicker">Contact</p>
+          <h2>Let us build something useful.</h2>
+          <p class="contact-copy">
+            Have a project, internship opportunity, or collaboration idea? Send a message and I will get back to you.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:madhavipatil2302@gmail.com">madhavipatil2302@gmail.com</a>
+            <a href="https://github.com/madhavipatil2302-eng" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/madhavi-patil-a56489304?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" action="mailto:madhavipatil2302@gmail.com" method="post" enctype="text/plain">
+          <label>
+            <span>Your Name</span>
+            <input type="text" name="name" placeholder="Enter your name" required>
+          </label>
+          <label>
+            <span>Your Email</span>
+            <input type="email" name="email" placeholder="Enter your email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" placeholder="Tell me about your project" rows="5" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Madhavi Patil. Designed and developed with clean code.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
